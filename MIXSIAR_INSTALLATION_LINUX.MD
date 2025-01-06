@@ -1,4 +1,4 @@
-# MixSIAR Installation Tutorial for Linux\
+# MixSIAR Installation Tutorial for Linux
 Author: Kurt R. Lindberg\
 Last edited: 01/05/2025
 
