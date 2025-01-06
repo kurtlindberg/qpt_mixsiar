@@ -8,15 +8,15 @@ Tested Linux distributions:
 - Ubuntu (20.04, 22.04, 24.04) and distributions based on these Ubuntu versions (Linux Mint, Pop!_OS, TuxedoOS)
 - Debian (12) and distributions based on these versions (MX Linux, Linux Mint Debian Edition)
 - Fedora (40, 41)
-- OpenSUSE (Tumbleweed)
+- OpenSUSE (Leap 15.6, Tumbleweed)
 - Arch Linux
 
 ## Install R
 
 ## Install RStudio (optional, but recommended)
 
-## Install R packages (pre JAGS install)
+## Install R packages (pre-JAGS-install)
 
 ## Install JAGS
 
-## Install remaining R packages (post JAGS install)
+## Install remaining R packages (post-JAGS-install)
