@@ -46,6 +46,17 @@ While many of these steps (i.e. moving, extracting, and installing files) can be
   - OpenMX
 
 ## Install JAGS
+- JAGS (Just Another Gibbs Sampler) is the "engine" that power the MixSIAR model and is installed separately from the supporting R packages.
+- Download the latest version "JAGS-4.3.2.tar.gz" from SourceForge: https://sourceforge.net/projects/mcmc-jags/files/
+- Move to the "Downloads" directory where the JAGS file should be located after downloading it:\
+`cd ~/Downloads`
+  - _Optional:_ Print the contents of the Downloads directory in the terminal to make sure the JAGS file is there:\
+`ls`
+- Extract the contents of the JAGS file to the home directory (~):\
+`tar -xvzf JAGS-4.3.2.tar.gz -C ~/`
+- Move to the newly-created JAGS directory
+- Installting JAGS follows the GNU convention of "./configure, make, make install" for a Linux distributions with some minor variations for distributions that do not fully comply with the Linux Foundation's File Hierarchy Standards (FHS)
+  - Ubuntu, Debian, 
 
 ## Install remaining R packages (post-JAGS-install)
 
