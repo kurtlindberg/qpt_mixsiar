@@ -24,6 +24,7 @@ Requires MacOS 12+. Tested using MacOS 12.7.6 (Monterey)
   - loo
   - bayesplot
   - splancs
+  - usethis
   - devtools
   - viridisLite
   - EnvStats
