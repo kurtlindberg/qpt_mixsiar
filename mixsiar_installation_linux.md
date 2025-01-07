@@ -14,7 +14,7 @@ While many of these steps (i.e. moving, extracting, and installing files) can be
 
 ## Install R packages (pre-JAGS-install)
 - This tutorial will (mostly) go over installing the necessary R packages using the `install.packages()` command.
-- Open and R console in your terminal or IDE:\
+- Open and R console in your terminal (or IDE):\
 `R`
   - _Note:_ If you use Anaconda as your (base) Python environment, make sure your deactivate it in your terminal session prior to install R packages. Having Anaconda activate can cause library version conflicts between Anaconda and your regular Linux system (confirmed for OpenSUSE). Follow the documentation (https://docs.anaconda.com/anaconda/install/) for instructions on deactivating your Anacodna environment.
 - Some packages may reutrn an error when installing due to unment Linux dependencies. Most of the time, the error message will list the missing libraries under a few general categories of operating system type (i.e. deb, rpm, Mac). Ubuntu and Deban distributions fall under the "deb" category while Fedora and OpenSUSE are in the "rpm" category (no missing dependencies encountered in Arch Linux). Open a new tab for your terminal (not in an R console) to install the missing packages:\
@@ -39,6 +39,7 @@ While many of these steps (i.e. moving, extracting, and installing files) can be
   - loo
   - bayesplot
   - splancs
+  - usethis
   - devtools
   - viridisLite
   - EnvStats
