@@ -11,7 +11,12 @@ Tested Linux distributions:
 - OpenSUSE (Leap 15.6, Tumbleweed)
 - Arch Linux
 
+_Notes:_\
+While many of these steps (i.e. moving, extracting, and installing files) can be done graphically on most Linux systems, the following installation instructions will use Linux terminal commands so they can be applicable to as many Linux configurations as possible.
+
 ## Install R
+- R is generally not preinstalled or up to date on most Linux distributions
+- _Note for Ubuntu and Debian:_ Some distributions/versions may not recognize the command 'add-apt-repository' for adding a new repository in the terminal. To fix this, install the associated package containing this command by entering:
 
 ## Install RStudio (optional, but recommended)
 
