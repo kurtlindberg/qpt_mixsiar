@@ -41,7 +41,7 @@ Requires MacOS 12+. Tested using MacOS 12.7.6 (Monterey)
 `cd JAGS-4.3.2`
 - Enter the following command in the terminal to include the Accelerate framework for installing JAGS:\
 `export LDFLAGS="-framework Accelerate"`
-- Run the following commands in order to install JAGS:
+- Run the following commands in order to install JAGS:\
 `./configure`\
 `make -j 8`\
 `sudo make install`
