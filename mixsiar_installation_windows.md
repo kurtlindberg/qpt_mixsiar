@@ -59,6 +59,12 @@ Since the default Linux distribution installed with WSL is Ubuntu, the following
 `sudo make install`
 
 ## Install remaining R packages (post-JAGS-install)
+- The remaining R packages depend on JAGS being installed on your system and will fail to install if that cannot locate JAGS
+- For some reason, the primary R package that interacts with JAGS, "rjags", does not install through the `install.pacakges()` method. To correctly install rjags, run the following command in a regular terminal (not in R console):\
+`sudo apt install r-cran-rjags`
+- The following R packages that depend on JAGS and rjags can now be installed:
+ - R2jags
+ - MixSIAR
 
 ## Post-installation & References
 You should now have everything you need to start using MixSIAR on Windows (WSL)! Consider exploring the very helpful MixSIAR documentation and vignettes here (https://cran.r-project.org/web/packages/MixSIAR/index.html) to start learning how to use the model.
