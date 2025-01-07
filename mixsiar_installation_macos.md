@@ -33,7 +33,7 @@ Requires MacOS 12+. Tested using MacOS 12.7.6 (Monterey)
 ## Install JAGS
 - JAGS (Just Another Gibbs Sampler) is the "engine" that power the MixSIAR model and is installed separately from the supporting R packages.
 - Before installing JAGS, you will need to install command line compilers for you terminal. Enter the following commands to install the basic command line compilers from "xcode-select" and the Fortran compiler "gfortran":\
-`xcode-select --install`
+`xcode-select --install`\
 `brew install gfortran`
 - Download the latest version "JAGS-4.3.2.tar.gz" from SourceForge: https://sourceforge.net/projects/mcmc-jags/files/
 - Move the JAGS-4.3.2.tar.gz file to a suitable working space on your computer (home folder is probably easiest), and double click on the file to extract it as a new directory.
@@ -42,9 +42,9 @@ Requires MacOS 12+. Tested using MacOS 12.7.6 (Monterey)
 - Enter the following command in the terminal to include the Accelerate framework for installing JAGS:\
 `export LDFLAGS="-framework Accelerate"`
 - Run the following commands in order to install JAGS:
-  - ./configure
-  - make -j 8
-  - sudo make install
+`./configure`\
+`make -j 8`\
+`sudo make install`
 
 ## Install remaining R packages (post-JAGS-install)
 - The remaining R packages depend on JAGS being installed on your system and will fail to install if that cannot locate JAGS.
