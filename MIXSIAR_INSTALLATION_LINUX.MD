@@ -16,10 +16,13 @@ While many of these steps (i.e. moving, extracting, and installing files) can be
 
 ## Install R
 - R is generally not preinstalled or up to date on most Linux distributions
-- _Note for Ubuntu and Debian:_ Some distributions/versions may not recognize the command 'add-apt-repository' for adding a new repository in the terminal. To fix this, install the associated package containing this command by entering:\
+  - _Note for Ubuntu and Debian:_ Some distributions/versions may not recognize the command 'add-apt-repository' for adding a new repository in the terminal. To fix this, install the associated package containing this command by entering:\
 `sudo apt install software-properties-common`
-- _Note for Arch Linux:_ Parts of the tutorial involve building packages from the Arch User Repository (AUR). Make sure you have the 'git' and 'base-devel' packages installed before proceeding:\
+  - _Note for Arch Linux:_ Parts of the tutorial involve building packages from the Arch User Repository (AUR). Make sure you have the 'git' and 'base-devel' packages installed before proceeding:\
 `sudo pacman -S --needed git base-devel`
+  - You can also use an AUR wrapper like 'yay' (https://github.com/Jguer/yay), but the instructions provided here will follow the traditional steps for building packages through the AUR.
+
+### Ubuntu (https://cran.r-project.org/bin/linux/ubuntu/fullREADME.html):
 
 ## Install RStudio (optional, but recommended)
 
