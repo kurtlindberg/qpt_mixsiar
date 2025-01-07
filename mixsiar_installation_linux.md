@@ -68,12 +68,12 @@ While many of these steps (i.e. moving, extracting, and installing files) can be
 
 ## Install remaining R packages (post-JAGS-install)
 - The remaining R packages depend on JAGS being installed on your system and will fail to install if that cannot locate JAGS
-  - Ubuntu and Debian: For some reason, the primary R package that interacts with JAGS, "rjags", does not install through the `install.pacakges()` method. To correctly install rjags, run the following command in a regular terminal (not in R console):
+  - Ubuntu and Debian: For some reason, the primary R package that interacts with JAGS, "rjags", does not install through the `install.pacakges()` method. To correctly install rjags, run the following command in a regular terminal (not in R console):\
 `sudo apt install r-cran-rjags`
   - Fedora, OpenSUSE, Arch Linux:
-    - Refresh your system's linked libraries by running the following command in a regular terminal:
+    - Refresh your system's linked libraries by running the following command in a regular terminal:\
 `sudo /sbin/ldconfig`
-    - Return to the R console to install rjags:
+    - Return to the R console to install rjags:\
 `install.packages("rjags", configure.args="--enable-rpath")`
 - The following R packages that depend on JAGS and rjags can now be installed:
  - R2jags
