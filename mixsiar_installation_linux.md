@@ -56,17 +56,28 @@ While many of these steps (i.e. moving, extracting, and installing files) can be
 `tar -xvzf JAGS-4.3.2.tar.gz -C ~/`
 - Move to the newly-created JAGS directory:\
 `cd ~/JAGS-4.3.2`
-- Installting JAGS follows the GNU convention of "./configure, make, make install" for a Linux distributions with some minor variations for distributions that do not fully comply with the Linux Foundation's File Hierarchy Standards (FHS)
+- Installting JAGS follows the GNU convention of "./configure, make, make install" for a Linux distributions with some minor variations for distributions that do not fully comply with the Linux Foundation's File Hierarchy Standard (FHS)
   - Ubuntu, Debian, Arch Linux:\
 `./configure`\
 `make`\
 `sudo make install`
   - Fedora and OpenSUSE:\
-`./configure --libdir=/usr/local/lib64`
-`make`
+`./configure --libdir=/usr/local/lib64`\
+`make`\
 `sudo make install`
 
 ## Install remaining R packages (post-JAGS-install)
+- The remaining R packages depend on JAGS being installed on your system and will fail to install if that cannot locate JAGS
+  - Ubuntu and Debian: For some reason, the primary R package that interacts with JAGS, "rjags", does not install through the `install.pacakges()` method. To correctly install rjags, run the following command in a regular terminal (not in R console):
+`sudo apt install r-cran-rjags`
+  - Fedora, OpenSUSE, Arch Linux:
+    - Refresh your system's linked libraries by running the following command in a regular terminal:
+`sudo /sbin/ldconfig`
+    - Return to the R console to install rjags:
+`install.packages("rjags", configure.args="--enable-rpath")`
+- The following R packages that depend on JAGS and rjags can now be installed:
+ - R2jags
+ - MixSIAR
 
 ## Post-Installation & References
 You should now have everything you need to start using MixSIAR on your Linux system! Consider exploring the very helpful MixSIAR documentation and vignettes here (https://cran.r-project.org/web/packages/MixSIAR/index.html) to start learning how to use the model.
