@@ -21,6 +21,18 @@ While many of these steps (i.e. moving, extracting, and installing files) can be
   - You can also use an AUR wrapper like 'yay' (https://github.com/Jguer/yay), but the instructions provided here will follow the traditional steps for building packages through the AUR.
 
 ### Ubuntu (https://cran.r-project.org/bin/linux/ubuntu/fullREADME.html):
+- Add the key to the up to date R repository by running:\
+`wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc`
+- Verify the key by running:\
+`gpg --show-keys /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc`
+- Add the updated R repository for Ubunutu (must match your version):\
+`sudo apt-add-repository deb https://cloud.r-project.org/bin/linux/ubuntu noble-cran40/`
+- Update your system by running:\
+`sudo apt update`
+- Install the complete R system by running:\
+`sudo apt install r-base r-base-dev`
+
+### Debian (https://cran.r-project.org/bin/linux/debian/):
 
 ## Install RStudio (optional, but recommended)
 
