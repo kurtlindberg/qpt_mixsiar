@@ -1,6 +1,6 @@
 # MixSIAR Installation Tutorial for Linux
 
-This tutorial will walk you through all of the steps needed to use MixSIAR (Stock et al., 2018); a framework for creating an running Bayesian mixing models. Instructions here are provided for Linux-based operating systems, see MIXSIAR_INSTALLATION_WINDOWS.MD and MIXSIAR_INSTALLATION_MACOS.MD for installation instructions for Windows and MacOS, respectively. These instructions assume R (>= 4.4.0) is already installed on your system. It is also recommended to have a graphical Integrated Development Environment (IDE), like RStudio, installed for running MixSIAR scripts line by line and to help debug.
+This tutorial will walk you through all of the steps needed to use MixSIAR (Stock et al., 2018); a framework for creating an running Bayesian mixing models. Instructions here are provided for Linux-based operating systems, see MIXSIAR_INSTALLATION_WINDOWS.MD and MIXSIAR_INSTALLATION_MACOS.MD for installation instructions for Windows and MacOS, respectively. These instructions assume R ($\geq$4.4.0) is already installed on your system. It is also recommended to have a graphical Integrated Development Environment (IDE), like RStudio, installed for running MixSIAR scripts line by line and to help debug.
 
 Tested Linux distributions:
 - Ubuntu (20.04, 22.04, 24.04) and distributions based on these Ubuntu versions (Linux Mint, Pop!_OS, TuxedoOS)
