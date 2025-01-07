@@ -1,6 +1,6 @@
 # MixSIAR Installation Tutorial for Linux
 
-This tutorial will walk you through all of the steps needed to use MixSIAR (Stock et al., 2018); a framework for creating an running Bayesian mixing models. Instructions here are provided for Linux-based operating systems, see mixsiar_installation_windows.md and mixsiar_installation_macos.md for installation instructions for Windows and MacOS, respectively. These instructions assume R ($`\geq`$4.4.0) is already installed on your system. It is also recommended to have a graphical Integrated Development Environment (IDE), like RStudio, installed for running MixSIAR scripts line by line and to help debug. These instructions also provide you with everything you need to run LipidMM (Yang & Bowen, 2022); another, plant leaf wax-specific Bayesian mixing model framework that uses all of the same resources.
+This tutorial will walk you through all of the steps needed to use MixSIAR (Stock et al., 2018); a framework for creating and running Bayesian mixing models. Instructions here are provided for Linux-based operating systems, see mixsiar_installation_windows.md and mixsiar_installation_macos.md for installation instructions for Windows and MacOS, respectively. These instructions assume R ($`\geq`$4.4.0) is already installed on your system. It is also recommended to have a graphical Integrated Development Environment (IDE), like RStudio, installed for running MixSIAR scripts line by line and to help debug. These instructions also provide you with everything you need to run LipidMM (Yang & Bowen, 2022); another, plant leaf wax-specific Bayesian mixing model framework that uses all of the same resources.
 
 Tested Linux distributions:
 - Ubuntu (20.04, 22.04, 24.04) and distributions based on these Ubuntu versions (Linux Mint, Pop!_OS, TuxedoOS)
@@ -14,10 +14,10 @@ While many of these steps (i.e. moving, extracting, and installing files) can be
 
 ## Install R packages (pre-JAGS-install)
 - This tutorial will (mostly) go over installing the necessary R packages using the `install.packages()` command.
-- Open and R console in your terminal (or IDE):\
+- Open an R console in your terminal (or IDE):\
 `R`
   - _Note:_ If you use Anaconda as your (base) Python environment, make sure your deactivate it in your terminal session prior to install R packages. Having Anaconda activate can cause library version conflicts between Anaconda and your regular Linux system (confirmed for OpenSUSE). Follow the documentation (https://docs.anaconda.com/anaconda/install/) for instructions on deactivating your Anacodna environment.
-- Some packages may reutrn an error when installing due to unment Linux dependencies. Most of the time, the error message will list the missing libraries under a few general categories of operating system type (i.e. deb, rpm, Mac). Ubuntu and Deban distributions fall under the "deb" category while Fedora and OpenSUSE are in the "rpm" category (no missing dependencies encountered in Arch Linux). Open a new tab for your terminal (not in an R console) to install the missing packages:\
+- Some packages may reutrn an error when installing due to unment Linux dependencies. Most of the time, the error message will list the missing libraries under a few general categories of operating system type (i.e. deb, rpm, Mac). Ubuntu and Deban distributions fall under the "deb" category while Fedora and OpenSUSE are in the "rpm" category. Open a new tab for your terminal (not in an R console) to install the missing packages:\
 `sudo <apt/dnf/zypper> install <package_names>`
 - There are some exceptions to the error message pattern that vary between Linux distributions. Here are some packages that need to be installed to avoid more cryptic error messages during the rest of the installation instructions:
   - Ubuntu and Debian:\
