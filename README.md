@@ -7,7 +7,7 @@ Manuscript Title: Bayesian modeling plant wax sources to an Eastern Canadian Arc
 Authors: Kurt R. Lindberg, Elizabeth K. Thomas, Martha K. Raynolds, Helga Bultmann
 
 ## MixSIAR Workflow
-- Generate model input files
-- Run model experiments
-- Generate plots from output summaries
+1. Generate model input files
+2. Run model experiments
+3. Generate plots from output summaries
 
