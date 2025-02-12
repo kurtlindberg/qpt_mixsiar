@@ -1,13 +1,6 @@
 #start from rocker/binder image
 FROM rocker/binder:4
 
-## Declares build arguments
-ARG NB_USER
-ARG NB_UID
-
-COPY --chown=${NB_USER} . ${HOME}
-USER ${NB_USER}
-
 RUN apt-get update && . /etc/environment \
   && wget sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Source/JAGS-4.3.1.tar.gz  -O jags.tar.gz \
   && tar -xf jags.tar.gz \
@@ -38,3 +31,10 @@ ENV RENV_PATHS_LIBRARY renv/library
 
 #restore environment from lockfile
 RUN R -e "renv::restore()"
+
+## Declares build arguments
+ARG NB_USER
+ARG NB_UID
+
+COPY --chown=${NB_USER} . ${HOME}
+USER ${NB_USER}
