@@ -8,9 +8,16 @@ Scripts for plant wax mixing model (MixSIAR) experiments and results processing 
 
 ## Study site: Lake Qaupat (QPT)
 
-Lake Qaupat (QPT) is located in southern Baffin Island near the city of Iqaluit and Frobisher Bay (63.68&deg;N, 68.20W)
+Lake Qaupat (QPT) is located in southern Baffin Island near the city of Iqaluit and Frobisher Bay (63.68&deg;N, 68.20&deg;W). The modern catchment vegetation is predominantly shrubs on land, including *Betula nana* and *Salix arctica*, and submerged aquatic mosses within the lake, such as *Calliergon richardsonii* (Hollister et al., 2022).
+
+Sedimentary ancient DNA (*seda*DNA) evidence revealed that *Betula* sp. first colonized the catchment at 6.1 ka (Crump et al., 2019), following local Laurentide Ice Sheet deglaciation around ~9-8 ka (Miller, 1980). However, *seda*DNA can only be interpreted on a presence/absence basis, leaving questions about how the overall catchment vegetation community and biomass may have changed following *Betula* sp. colonization.
+
+To address these questions, we use the Bayesian mixing model framework, MixSIAR (Stock et al., 2018), to quantitatively estimate the sources of plant waxes post-*Betula* sp. colonization to represent changes in vegetation/biomass. 
+
+**[INSERT FIGURE HERE]**
 
 ## Data: Plant Wax *n*-alkanoic acids
+
 
 ## MixSIAR Workflow
 
@@ -30,11 +37,15 @@ Lake Qaupat (QPT) is located in southern Baffin Island near the city of Iqaluit 
 
 ## References
 
+Crump, S. E., Miller, G. H., Power, M., Sepúlveda, J., Dildar, N., Coghlan, M., & Bunce, M. (2019). Arctic shrub colonization lagged peak postglacial warmth: Molecular evidence in lake sediment from Arctic Canada. Global Change Biology, 25(12), 4244-4256.
+
 Hollister, K. V., Thomas, E. K., Raynolds, M. K., Bültmann, H., Raberg, J. H., Miller, G. H., & Sepúlveda, J. (2022). Aquatic and terrestrial plant contributions to sedimentary plant waxes in a modern Arctic lake setting. Journal of Geophysical Research: Biogeosciences, 127(8), e2022JG006903.
 
 Lindberg, K.R., Thomas, E.K., Raynolds, M.K., Bultmann, H. 2024 (talk) *Evaluating plant waxes as tracer for reconstructing mid-late Holocene vegetation change in a sourthern Baffin Island lake catchment* The 52nd International Arctic Workshop, Amherst, MA, Mar. 13-16.
 
 Menges, J., Hovius, N., Andermann, C., Lupker, M., Haghipour, N., Märki, L., & Sachse, D. (2020). Variations in organic carbon sourcing along a trans-Himalayan river determined by a Bayesian mixing approach. Geochimica et Cosmochimica Acta, 286, 159-176.
+
+Miller, G. H. (1980). Late foxe glaciation of southern Baffin Island, NWT, Canada. Geological Society of America Bulletin, 91(7), 399-405.
 
 Stock, Brian C., Andrew L. Jackson, Eric J. Ward, Andrew C. Parnell, Donald L. Phillips, and Brice X. Semmens. "Analyzing mixing systems using a new generation of Bayesian tracer mixing models." PeerJ 6 (2018): e5096.
 
