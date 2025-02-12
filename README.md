@@ -2,9 +2,13 @@
 
 Scripts for plant wax mixing model (MixSIAR) experiments and results processing for Lake QPT, Baffin Island, Nunavut, Canada (Lindberg et al., in prep).
 
-**Manuscript Title**: Bayesian modeling plant wax sources to an Eastern Canadian Arctic lake sediment record reveals stable plant wax vegetation sources following postglacial shrub colonization
+**Manuscript title**: Bayesian modeling plant wax sources to an Eastern Canadian Arctic lake sediment record reveals stable plant wax vegetation sources following postglacial shrub colonization
 
 **Authors**: Kurt R. Lindberg, Elizabeth K. Thomas, Martha K. Raynolds, Helga Bultmann
+
+## Study site: Lake Qaupat (QPT)
+
+## Data: Plant Wax *n*-alkanoic acids
 
 ## MixSIAR Workflow
 
