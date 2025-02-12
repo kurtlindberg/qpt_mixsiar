@@ -49,7 +49,7 @@ Crump, S. E., Miller, G. H., Power, M., Sepúlveda, J., Dildar, N., Coghlan, M.,
 
 Hollister, K. V., Thomas, E. K., Raynolds, M. K., Bültmann, H., Raberg, J. H., Miller, G. H., & Sepúlveda, J. (2022). Aquatic and terrestrial plant contributions to sedimentary plant waxes in a modern Arctic lake setting. Journal of Geophysical Research: Biogeosciences, 127(8), e2022JG006903.
 
-Lindberg, K.R., Thomas, E.K., Raynolds, M.K., Bultmann, H. 2024 (talk) *Evaluating plant waxes as tracer for reconstructing mid-late Holocene vegetation change in a sourthern Baffin Island lake catchment* The 52nd International Arctic Workshop, Amherst, MA, Mar. 13-16.
+Lindberg, K.R., Thomas, E.K., Raynolds, M.K., Bultmann, H. 2024 (talk). Evaluating plant waxes as tracer for reconstructing mid-late Holocene vegetation change in a sourthern Baffin Island lake catchment. The 52nd International Arctic Workshop, Amherst, MA, Mar. 13-16.
 
 Menges, J., Hovius, N., Andermann, C., Lupker, M., Haghipour, N., Märki, L., & Sachse, D. (2020). Variations in organic carbon sourcing along a trans-Himalayan river determined by a Bayesian mixing approach. Geochimica et Cosmochimica Acta, 286, 159-176.
 
