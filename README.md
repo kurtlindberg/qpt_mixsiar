@@ -16,7 +16,7 @@ To address these questions, we use the Bayesian mixing model framework, MixSIAR 
 
 **[INSERT FIGURE HERE]**
 
-## Data: Plant Wax *n*-alkanoic acids
+## Data: Plant wax *n*-alkanoic acids
 
 We use plant wax *n*-alkanoic acid carbon chain-length distributions and $`\delta`$<sup>13</sup>C as tracers to model the contributions of different endmember priors. $`\delta`$<sup>13</sup>C values are used as the primary tracers and are weighted by the concentration of each carbon chain-length (Upadhayay et al., 2018).
 
