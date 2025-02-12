@@ -8,6 +8,8 @@ Scripts for plant wax mixing model (MixSIAR) experiments and results processing 
 
 ## Study site: Lake Qaupat (QPT)
 
+Lake Qaupat (QPT) is located in southern Baffin Island near the city of Iqaluit and Frobisher Bay (63.68$&deg$N, 68.20W)
+
 ## Data: Plant Wax *n*-alkanoic acids
 
 ## MixSIAR Workflow
