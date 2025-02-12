@@ -18,7 +18,7 @@ To address these questions, we use the Bayesian mixing model framework, MixSIAR 
 
 ## Data: Plant Wax *n*-alkanoic acids
 
-We use plant wax *n*-alkanoic acid carbon chain-length distributions and $`\delta`$<sup>13</sup>C as tracers to model the contributions of different endmember priors. 
+We use plant wax *n*-alkanoic acid carbon chain-length distributions and $`\delta`$<sup>13</sup>C as tracers to model the contributions of different endmember priors. $`\delta`$<sup>13</sup>C values are used as the primary tracers and are weighted by the concentration of each carbon chain-length (Upadhayay et al., 2018).
 
 
 ## MixSIAR Workflow
@@ -36,7 +36,9 @@ We use plant wax *n*-alkanoic acid carbon chain-length distributions and $`\delt
 2. **Run model experiments**
 
 - MixSIAR experiements are run using qpt_mixsiar.R (Jupyter Notebook version in progress). The script is set to output two files upon model completion:
+  
    1. **output_summary**: Lists model-calculated proportional (out of 1) contributions for each endmember as a mean, standard deviation, and percentile values.
+  
    2. **diagnostics**: Determines if the model run reached sufficient convergence as dictated by the Gelman and Geweke diagnostic criteria described in each file.
    
 3. Generate plots from output summaries (In progress)
@@ -54,5 +56,7 @@ Menges, J., Hovius, N., Andermann, C., Lupker, M., Haghipour, N., Märki, L., & 
 Miller, G. H. (1980). Late foxe glaciation of southern Baffin Island, NWT, Canada. Geological Society of America Bulletin, 91(7), 399-405.
 
 Stock, Brian C., Andrew L. Jackson, Eric J. Ward, Andrew C. Parnell, Donald L. Phillips, and Brice X. Semmens. "Analyzing mixing systems using a new generation of Bayesian tracer mixing models." PeerJ 6 (2018): e5096.
+
+Upadhayay, H. R., Bodé, S., Griepentrog, M., Bajracharya, R. M., Blake, W., Cornelis, W., & Boeckx, P. (2018). Isotope mixing models require individual isotopic tracer content for correct quantification of sediment source contributions. Hydrological Processes, 32(7), 981-989.
 
 
