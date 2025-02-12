@@ -18,14 +18,14 @@ To address these questions, we use the Bayesian mixing model framework, MixSIAR 
 
 ## Data: Plant Wax *n*-alkanoic acids
 
-We use plant wax *n*-alkanoic acid carbon chain-length distributions and $`\delta`$13C as tracers to model the contributions of different endmember priors. 
+We use plant wax *n*-alkanoic acid carbon chain-length distributions and $`\delta`$^13^C as tracers to model the contributions of different endmember priors. 
 
 
 ## MixSIAR Workflow
 
 1. **Generate model input files**
    
-- **Mix**: Mixture files are the $\delta$13C values of specified *n*-alkanoic acid carbon chain-lengths in Lake QPT sediments. Downcore sediment measurements (Age $\geq$ -39 cal yr BP) are from this study, while other samples are from Hollister et al. (2022).
+- **Mix**: Mixture files are the $`\delta`$^13^C values of specified *n*-alkanoic acid carbon chain-lengths in Lake QPT sediments. Downcore sediment measurements (Age $\geq$ -39 cal yr BP) are from this study, while other samples are from Hollister et al. (2022).
   
 - **Source**: Means and standard deviations of user-defined vegetation endmembers in the Python inputs script. Endmember statistics are created from individual samples in "qpt_plantwax_source.xlsx"
    - Note (02/11/2025): Published Lake QPT plant wax endmember data (Hollister et al., 2022; DOI: https://doi.org/10.1029/2022JG006903) currently available. Eastern Canadian Arctic plant wax data not yet published as part of Lindberg et al. (in prep): *Ecological and environmental controls on plant wax production and stable isotope fractionation in modern terrestrial Arctic vegetation*
