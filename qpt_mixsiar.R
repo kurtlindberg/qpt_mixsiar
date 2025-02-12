@@ -10,7 +10,7 @@
 # DOI: pending
 
 # Author: Kurt R. Lindberg
-# Last edited: 11/25/2024
+# Last edited: 02/11/2025
 
 
 # Add necessary packages to R library
@@ -24,7 +24,7 @@ library(MixSIAR)
 
 # Load mixture file
 mix <- load_mix_data(
-  filename = "mix/mix_qpt_c26.csv",
+  filename = "mix/mix_qpt_c22c28.csv",
   iso_names = c("c26"),
   factors = "Age",
   fac_random = FALSE,
@@ -35,7 +35,7 @@ mix <- load_mix_data(
 
 # Load sources file - concentration dependence currently ON
 source <- load_source_data(
-  filename = "source/source_eca_2end_c26.csv",
+  filename = "source/source_qpt_2end_c22c28.csv",
   source_factors = NULL,
   conc_dep = FALSE,
   data_type = "means",
@@ -45,7 +45,7 @@ source <- load_source_data(
 
 # Load discrimination factors file
 discr <- load_discr_data(
-  filename = "discr/discr_2end_c26.csv",
+  filename = "discr/discr_2end_c22c28.csv",
   mix
 )
 # discr
@@ -88,7 +88,7 @@ jags.1 <- run_model(
 # Export MixSIAR outputs
 output_options <- list(
   summary_save = TRUE,
-  summary_name = "output_summary/out_eca_2end_c26",
+  summary_name = "output_summary/out_qpt_2end_c22c28",
   sup_post = FALSE,
   plot_post_save_pdf = FALSE,
   plot_post_name = "posterior_density",
@@ -102,7 +102,7 @@ output_options <- list(
   heidel = FALSE,
   geweke = TRUE,
   diag_save = TRUE,
-  diag_name = "diagnostic/diag_eca_2end_c26",
+  diag_name = "diagnostic/diag_qpt_2end_c22c28",
   indiv_effect = FALSE,
   plot_post_save_png = FALSE,
   plot_pairs_save_png = FALSE,
