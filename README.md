@@ -25,17 +25,21 @@ We use plant wax *n*-alkanoic acid carbon chain-length distributions and $`\delt
 
 1. **Generate model input files**
    
-- **Mix**: Mixture files are the $`\delta`$<sup>13</sup>C values of specified *n*-alkanoic acid carbon chain-lengths in Lake QPT sediments. Downcore sediment measurements (Age $\geq$ -39 cal yr BP) are from this study, while other samples are from Hollister et al. (2022).
+- **Mix**: Mixture files are the $`\delta`$<sup>13</sup>C values of specified *n*-alkanoic acid carbon chain-lengths in Lake QPT sediments. Downcore sediment measurements (Age $\geq$ -39 cal yr BP) are from this study, while other samples are from Hollister et al. (2022). These files are currently not produced by qpt_mixsiar_makeinputs.ipynb.
   
-- **Source**: Means and standard deviations of user-defined vegetation endmembers in the Python inputs script. Endmember statistics are created from individual samples in "qpt_plantwax_source.xlsx"
+- **Source**: Means and standard deviations of user-defined vegetation endmembers in qpt_mixsiar_makeinputs.ipynb. Endmember statistics are created from individual samples in "qpt_plantwax_source.xlsx".
    - Note (02/11/2025): Published Lake QPT plant wax endmember data (Hollister et al., 2022; DOI: https://doi.org/10.1029/2022JG006903) currently available. Eastern Canadian Arctic plant wax data not yet published as part of Lindberg et al. (in prep): *Ecological and environmental controls on plant wax production and stable isotope fractionation in modern terrestrial Arctic vegetation*
    - Lake QPT plant wax endmember data from Hollister et al. (2022) is publically available on figshare: https://figshare.com/s/96c3bd6c11bae87c1e28?file=34381742
 
 - **Discr**: Discrimination factors that account for potential alteration/fractionation between the endmember and mixture. These factors are not well-defined in sedimentary mixing studies (Menges et al., 2020), so the Python input script sets them all to "0".
 
-2. Run model experiments
+2. **Run model experiments**
+
+- MixSIAR experiements are run using qpt_mixsiar.R (Jupyter Notebook version in progress). The script is set to output two files upon model completion:
+   1. **output_summary**: Lists model-calculated proportional (out of 1) contributions for each endmember as a mean, standard deviation, and percentile values.
+   2. **diagnostics**: Determines if the model run reached sufficient convergence as dictated by the Gelman and Geweke diagnostic criteria described in each file.
    
-3. Generate plots from output summaries
+3. Generate plots from output summaries (In progress)
 
 ## References
 
