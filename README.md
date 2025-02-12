@@ -13,9 +13,9 @@ Scripts for plant wax mixing model (MixSIAR) experiments and results processing 
 - **Mix**: 
   
 - **Source**
- - Means and standard deviations of user-defined vegetation endmembers in the Python inputs script. Endmember statistics are created from individual samples in "qpt_plantwax_source.xlsx"
- - Note (02/11/2025): Published Lake QPT plant wax endmember data (Hollister et al., 2022; DOI: https://doi.org/10.1029/2022JG006903) currently available. Eastern Canadian Arctic plant wax data not yet published as part of Lindberg et al. (in prep): *Ecological and environmental controls on plant wax production and stable isotope fractionation in modern terrestrial Arctic vegetation*
- - Lake QPT plant wax endmember data from Hollister et al. (2022) is publically available on figshare: https://figshare.com/s/96c3bd6c11bae87c1e28?file=34381742
+   - Means and standard deviations of user-defined vegetation endmembers in the Python inputs script. Endmember statistics are created from individual samples in "qpt_plantwax_source.xlsx"
+   - Note (02/11/2025): Published Lake QPT plant wax endmember data (Hollister et al., 2022; DOI: https://doi.org/10.1029/2022JG006903) currently available. Eastern Canadian Arctic plant wax data not yet published as part of Lindberg et al. (in prep): *Ecological and environmental controls on plant wax production and stable isotope fractionation in modern terrestrial Arctic vegetation*
+   - Lake QPT plant wax endmember data from Hollister et al. (2022) is publically available on figshare: https://figshare.com/s/96c3bd6c11bae87c1e28?file=34381742
 
 - **Discr**: Discrimination factors that account for potential alteration/fractionation between the endmember and mixture. These factors are not well-defined in sedimentary mixing studies (Menges et al., 2020), so the Python input script sets them all to "0".
 
