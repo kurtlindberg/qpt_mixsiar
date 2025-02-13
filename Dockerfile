@@ -1,8 +1,8 @@
 #start from rocker/binder image
 FROM rocker/rstudio
 
-RUN python -m ensurepip --upgrade
-RUN python -m pip install --no-cache-dir notebook jupyterlab
+RUN Python -m ensurepip --upgrade
+RUN Python -m pip install --no-cache-dir notebook jupyterlab
 RUN pip install --no-cache-dir jupyterhub
 
 RUN apt-get update && . /etc/environment \
