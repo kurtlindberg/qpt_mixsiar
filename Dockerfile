@@ -15,7 +15,7 @@ COPY qpt_conda_env.yaml qpt_conda_env.yaml
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 RUN bash Miniconda3-latest-Linux-x86_64.sh -b -p /miniconda
 ENV PATH=$PATH:/miniconda/condabin:/miniconda/bin
-RUN source conda activate -f qpt_conda_env.yaml
+RUN Python3 source conda activate -f qpt_conda_env.yaml
 
 #Set up renv
 RUN R -e "install.packages('renv', repos = c(CRAN = 'https://cloud.r-project.org'))"
