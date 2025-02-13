@@ -11,10 +11,14 @@ RUN python3 -m pip install --no-cache-dir notebook jupyterlab --break-system-pac
 RUN pip install --no-cache-dir jupyterhub --break-system-packages
 
 #Install JAGS
-RUN apt-get update && . /etc/environment \
-  && wget sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Source/JAGS-4.3.2.tar.gz  -O jags.tar.gz \
-  && tar -xf jags.tar.gz \
-  && cd JAGS* && ./configure && make -j4 && make install
+#from apt
+RUN apt-get -y install jags
+
+#from source
+# RUN apt-get update && . /etc/environment \
+#   && wget sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Source/JAGS-4.3.2.tar.gz  -O jags.tar.gz \
+#   && tar -xf jags.tar.gz \
+#   && cd JAGS* && ./configure && make -j4 && make install
 
 ## httr authentication uses this port
 EXPOSE 1410
