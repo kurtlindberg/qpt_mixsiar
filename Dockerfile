@@ -34,11 +34,11 @@ COPY renv.lock renv.lock
 ENV RENV_PATHS_LIBRARY renv/library
 
 #restore environment from lockfile
-RUN R -e "options(renv.config.pak.enabled = TRUE); renv::restore()"
+#RUN R -e "options(renv.config.pak.enabled = TRUE); renv::restore()"
 
 ## Declares build arguments
-ARG NB_USER
-ARG NB_UID
+#ARG NB_USER
+#ARG NB_UID
 
-COPY --chown=${NB_USER} . ${HOME}
-USER ${NB_USER}
+#COPY --chown=${NB_USER} . ${HOME}
+#USER ${NB_USER}
