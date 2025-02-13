@@ -1,7 +1,7 @@
 import os
 import yaml
 
-with open("environment.yaml") as file_handle:
+with open("qpt_conda_env.yaml") as file_handle:
     environment_data = yaml.safe_load(file_handle)
 
 for dependency in environment_data["dependencies"]:
