@@ -12,10 +12,12 @@ ENV HTTR_LOCALHOST 0.0.0.0
 
 #set up Conda environment in Jupyter
 COPY qpt_conda_env.yaml qpt_conda_env.yaml
-RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-RUN bash Miniconda3-latest-Linux-x86_64.sh -b -p /miniconda
-ENV PATH=$PATH:/miniconda/condabin:/miniconda/bin
-RUN echo "conda activate -f qpt_conda_env.yaml" >> ~/.bashrc
+COPY pip_install_from_conda_yaml.py pip_install_from_conda_yaml.py
+#RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+#RUN bash Miniconda3-latest-Linux-x86_64.sh -b -p /miniconda
+#ENV PATH=$PATH:/miniconda/condabin:/miniconda/bin
+RUN Python pip_install_from_conda_yaml.py
+#RUN echo "conda activate -f qpt_conda_env.yaml" >> ~/.bashrc
 
 #Set up renv
 RUN R -e "install.packages('renv', repos = c(CRAN = 'https://cloud.r-project.org'))"
