@@ -1,6 +1,9 @@
 #start from rocker/binder image
 FROM rocker/rstudio
 
+RUN python3 -m pip install --no-cache-dir notebook jupyterlab
+RUN pip install --no-cache-dir jupyterhub
+
 RUN apt-get update && . /etc/environment \
   && wget sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Source/JAGS-4.3.1.tar.gz  -O jags.tar.gz \
   && tar -xf jags.tar.gz \
