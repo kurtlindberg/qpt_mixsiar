@@ -1,6 +1,9 @@
 #start from rocker/binder image
 FROM rocker/rstudio
 
+RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+RUN bash Miniconda3-latest-Linux-x86_64.sh -b -p /miniconda
+ENV PATH=$PATH:/miniconda/condabin:/miniconda/bin
 RUN Python -m ensurepip --upgrade
 RUN Python -m pip install --no-cache-dir notebook jupyterlab
 RUN pip install --no-cache-dir jupyterhub
