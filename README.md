@@ -1,5 +1,7 @@
 [![DOI](https://zenodo.org/badge/894243495.svg)](https://doi.org/10.5281/zenodo.14861520)
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kurtlindberg/qpt_mixsiar/HEAD)
+
 # qpt_mixsiar
 
 Scripts for plant wax mixing model (MixSIAR) experiments and results processing for Lake QPT, Baffin Island, Nunavut, Canada (Lindberg et al., in prep).
