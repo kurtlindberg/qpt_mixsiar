@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir jupyterhub --break-system-packages
 
 #Install JAGS
 RUN apt-get update && . /etc/environment \
-  && wget sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Source/JAGS-4.3.1.tar.gz  -O jags.tar.gz \
+  && wget sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Source/JAGS-4.3.2.tar.gz  -O jags.tar.gz \
   && tar -xf jags.tar.gz \
   && cd JAGS* && ./configure && make -j4 && make install
 
