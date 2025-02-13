@@ -15,13 +15,7 @@ COPY qpt_conda_env.yaml qpt_conda_env.yaml
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 RUN bash Miniconda3-latest-Linux-x86_64.sh -b -p /miniconda
 ENV PATH=$PATH:/miniconda/condabin:/miniconda/bin
-RUN conda env create -f qpt_conda_env.yaml
-SHELL ["conda","run","-n","qpt","/bin/bash","-c"]
-RUN python -m ipykernel install --name kernel_qpt --display-name "Display Name qpt"
-RUN pip install -U -r packages/requirements_qpt.txt
-SHELL ["/bin/bash","-c"]
-RUN conda init
-RUN echo 'conda activate qpt' >> ~/.bashrc
+RUN source conda activate -f qpt_conda_env.yaml
 
 #Set up renv
 RUN R -e "install.packages('renv', repos = c(CRAN = 'https://cloud.r-project.org'))"
