@@ -6,8 +6,8 @@ RUN apt-get -y update
 #add python
 RUN apt-get -y install python3 python3-pip
 #RUN python3 -m ensurepip --upgrade
-RUN python3 -m pip install --no-cache-dir notebook jupyterlab
-RUN pip install --no-cache-dir jupyterhub
+RUN python3 -m pip install --no-cache-dir notebook jupyterlab --break-system-packages
+RUN pip install --no-cache-dir jupyterhub --break-system-packages
 
 RUN apt-get update && . /etc/environment \
   && wget sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Source/JAGS-4.3.1.tar.gz  -O jags.tar.gz \
