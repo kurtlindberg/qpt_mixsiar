@@ -24,7 +24,7 @@ COPY renv.lock renv.lock
 ENV RENV_PATHS_LIBRARY renv/library
 
 #restore environment from lockfile
-RUN R -e "renv::restore()"
+RUN R -e "options(renv.config.pak.enabled = TRUE); renv::restore()"
 
 ## Declares build arguments
 ARG NB_USER
