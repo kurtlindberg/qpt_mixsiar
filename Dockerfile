@@ -5,7 +5,7 @@ RUN apt-get -y update
 
 #add python
 RUN apt-get -y install python3 python3-pip
-RUN python3 -m ensurepip --upgrade
+#RUN python3 -m ensurepip --upgrade
 RUN python3 -m pip install --no-cache-dir notebook jupyterlab
 RUN pip install --no-cache-dir jupyterhub
 
