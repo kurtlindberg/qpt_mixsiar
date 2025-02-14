@@ -33,8 +33,7 @@ RUN apt-get -y update && apt-get install -y \
 
 #Create conda environment from environment.yaml
 RUN conda env create -f qpt_conda_env.yaml
-RUN echo "conda activate $(head -1 environment.yaml | cut -d' ' -f2)" >>
-~/.bashrc
+RUN echo "conda activate $(head -1 environment.yaml | cut -d' ' -f2)" >> ~/.bashrc
 
 #Install R kernel for Jupyter and common R packages
 RUN R -e "install.packages(c('IRkernel', 'ggplot2', 'devtools', 'MixSIAR'), repos='http://cran.rstudio.com/')"
