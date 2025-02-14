@@ -9,7 +9,7 @@ COPY qpt_conda_env.yaml .
 
 #Add R-lastest repository to apt
 RUN apt-get -y update && apt-get -y install software-properties-common
-RUN wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
+RUN wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
 RUN gpg --show-keys /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
 RUN add-apt-repository -y deb https://cloud.r-project.org/bin/linux/ubuntu noble-cran40/
 
