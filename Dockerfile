@@ -24,6 +24,11 @@ RUN apt-get -y install jags
 EXPOSE 1410
 ENV HTTR_LOCALHOST 0.0.0.0
 
+#set up environment in Jupyter
+COPY qpt_conda_env.yaml qpt_conda_env.yaml
+COPY pip_install_from_conda_yaml.py pip_install_from_conda_yaml.py
+RUN python3 pip_install_from_conda_yaml.py
+
 #Jupyter NB setup
 ARG NB_USER=jovyan
 ARG NB_UID=1000
@@ -36,11 +41,6 @@ COPY . ${HOME}
 USER root
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
-
-#set up environment in Jupyter
-COPY qpt_conda_env.yaml qpt_conda_env.yaml
-COPY pip_install_from_conda_yaml.py pip_install_from_conda_yaml.py
-RUN python3 pip_install_from_conda_yaml.py
 
 #Set up renv
 RUN R -e "install.packages('renv', repos = c(CRAN = 'https://cloud.r-project.org'))"
