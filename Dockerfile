@@ -38,11 +38,11 @@ RUN echo "conda activate $(head -1 environment.yaml | cut -d' ' -f2)" >> ~/.bash
 RUN R -e "install.packages(c('IRkernel', 'ggplot2', 'devtools', 'MixSIAR'), repos='http://cran.rstudio.com/')"
 # RUN R -e "IRkernel::installspec(user = FALSE)"
 
-#Install Jupyter Lab
-RUN conda install -c conda-forge jupyterlab
+#Install Jupyter Lab in conda environment
+RUN conda install -c conda-forge -n $(head -1 environment.yaml | cut -d' ' -f2) jupyterlab
 
-#Expose port for Jupyter Lab
-EXPOSE 8888
+# #Expose port for Jupyter Lab
+# EXPOSE 8888
 
 #Start Jupyter Lab
 CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser"]
