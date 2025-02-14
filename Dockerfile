@@ -14,7 +14,8 @@ RUN gpg --show-keys /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
 RUN add-apt-repository -y deb https://cloud.r-project.org/bin/linux/ubuntu noble-cran40/
 
 #Install system dependencies and R
-RUN apt-get -y update && apt-get install -y \
+RUN apt-get -y update && apt-get -y upgrade 
+RUN apt-get install -y \
     r-base \
     r-base-dev \
     libssl-dev \
@@ -35,7 +36,7 @@ RUN conda env create -f qpt_conda_env.yaml
 RUN echo "conda activate $(head -1 environment.yaml | cut -d' ' -f2)" >> ~/.bashrc
 
 #Install R kernel for Jupyter and common R packages
-RUN R -e "install.packages(c('IRkernel', 'ggplot2', 'devtools', 'MixSIAR'), repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages(c('IRkernel', 'ggplot2', 'devtools', 'MixSIAR'))"
 # RUN R -e "IRkernel::installspec(user = FALSE)"
 
 #Install Jupyter Lab in conda environment
