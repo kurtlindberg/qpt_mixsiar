@@ -9,7 +9,7 @@ RUN apt-get -y update
 RUN apt-get -y install python3 python3-pip
 RUN python3 -m pip install --no-cache-dir notebook jupyterlab --break-system-packages
 RUN pip install --no-cache-dir jupyterhub --break-system-packages
-RUN python3 pip install --no-cache-dir numpy pandas matplotlib
+RUN pip install --no-cache-dir numpy pandas matplotlib
 
 #Install JAGS
 #from apt
