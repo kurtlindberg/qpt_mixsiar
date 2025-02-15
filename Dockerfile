@@ -14,6 +14,19 @@ RUN pip install --no-cache-dir jupyterhub --break-system-packages
 #from apt
 RUN apt-get -y install jags
 
+#Jupyter NB setup
+ARG NB_USER=jovyan
+ARG NB_UID=1000
+ENV USER ${NB_USER}
+ENV NB_UID ${NB_UID}
+ENV HOME /home/${NB_USER}
+
+# Make sure the contents of our repo are in ${HOME}
+COPY . ${HOME}
+USER root
+RUN chown -R ${NB_UID} ${HOME}
+USER ${NB_USER}
+
 #from source
 # RUN apt-get update && . /etc/environment \
 #   && wget sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Source/JAGS-4.3.2.tar.gz  -O jags.tar.gz \
@@ -31,27 +44,27 @@ RUN python3 pip_install_from_conda_yaml.py
 
 #Set up renv
 RUN R -e "install.packages('renv', repos = c(CRAN = 'https://cloud.r-project.org'))"
-WORKDIR /home/docker_renv
+WORKDIR /home/${NB_USER}
 COPY . .
 ENV RENV_PATHS_LIBRARY renv/library
 
 #restore environment from lockfile
 RUN R -e "options(renv.config.pak.enabled = TRUE); renv::restore()"
 
-#Jupyter NB setup
-ARG NB_USER=jovyan
-ARG NB_UID=1000
-ENV USER ${NB_USER}
-ENV NB_UID ${NB_UID}
-ENV HOME /home/${NB_USER}
+# #Jupyter NB setup
+# ARG NB_USER=jovyan
+# ARG NB_UID=1000
+# ENV USER ${NB_USER}
+# ENV NB_UID ${NB_UID}
+# ENV HOME /home/${NB_USER}
 
 #RUN adduser --disabled-password \
 #    --gecos "Default user" \
 #    --uid ${NB_UID} \
 #    ${NB_USER}
 
-# Make sure the contents of our repo are in ${HOME}
-COPY . ${HOME}
-USER root
-RUN chown -R ${NB_UID} ${HOME}
-USER ${NB_USER}
+# # Make sure the contents of our repo are in ${HOME}
+# COPY . ${HOME}
+# USER root
+# RUN chown -R ${NB_UID} ${HOME}
+# USER ${NB_USER}
