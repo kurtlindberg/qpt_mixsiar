@@ -38,9 +38,11 @@ EXPOSE 1410
 ENV HTTR_LOCALHOST 0.0.0.0
 
 #set up environment in Jupyter
-COPY qpt_conda_env.yaml qpt_conda_env.yaml
-COPY pip_install_from_conda_yaml.py pip_install_from_conda_yaml.py
-RUN python3 pip_install_from_conda_yaml.py
+#brute force
+RUN pip install --no-cache-dir numpy pandas matplotlib --break-system-packages
+# COPY qpt_conda_env.yaml qpt_conda_env.yaml
+# COPY pip_install_from_conda_yaml.py pip_install_from_conda_yaml.py
+# RUN python3 pip_install_from_conda_yaml.py
 
 #Set up renv
 RUN R -e "install.packages('renv', repos = c(CRAN = 'https://cloud.r-project.org'))"
