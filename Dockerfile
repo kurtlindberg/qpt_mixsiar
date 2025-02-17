@@ -9,6 +9,12 @@ RUN apt-get -y update
 #from apt
 RUN apt-get -y install jags
 
+#add python
+RUN apt-get -y install python3 python3-pip build-essential
+RUN pip install --no-cache-dir notebook jupyterlab --break-system-packages
+RUN pip install --no-cache-dir jupyterhub --break-system-packages
+RUN pip install --no-cache-dir numpy pandas matplotlib --break-system-packages
+
 #Set up renv
 RUN R -e "install.packages('renv', repos = c(CRAN = 'https://cloud.r-project.org'))"
 WORKDIR /home/docker_renv
@@ -17,14 +23,6 @@ ENV RENV_PATHS_LIBRARY renv/library
 
 #restore environment from lockfile
 RUN R -e "options(renv.config.pak.enabled = TRUE); renv::restore()"
-
-#add python
-RUN apt-get -y install python3 python3-pip build-essential
-RUN pip install jupyterlab
-RUN pip install numpy pandas matplotlib
-# RUN python3 -m pip install --no-cache-dir notebook jupyterlab --break-system-packages
-# RUN pip install --no-cache-dir jupyterhub --break-system-packages
-# RUN pip install --no-cache-dir numpy pandas matplotlib --break-system-packages
 
 ## httr authentication uses this port
 EXPOSE 8888
