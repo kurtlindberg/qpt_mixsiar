@@ -20,8 +20,8 @@ RUN R -e "options(renv.config.pak.enabled = TRUE); renv::restore()"
 
 #add python
 RUN apt-get -y install python3 python3-pip build-essential
-RUN pip3 install jupyterlab
-RUN pip3 install numpy pandas matplotlib
+RUN pip install jupyterlab
+RUN pip install numpy pandas matplotlib
 # RUN python3 -m pip install --no-cache-dir notebook jupyterlab --break-system-packages
 # RUN pip install --no-cache-dir jupyterhub --break-system-packages
 # RUN pip install --no-cache-dir numpy pandas matplotlib --break-system-packages
