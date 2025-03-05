@@ -11,7 +11,7 @@ Requires MacOS 12+. Tested using MacOS 12.7.6 (Monterey)
 `R`
 - Some packages may reutrn an error when installing due to unment Linux dependencies. Most of the time, the error message will list the missing libraries under a few general categories of operating system type (i.e. deb, rpm, Mac). Open a new tab for your terminal (not in an R console) to install the missing packages:\
 `brew install <package_names>`
-- The following packages should be installed prior to installing JAGS:
+- The following R packages should be installed prior to installing JAGS:
   - ggplot2
   - RColorBrewer
   - MASS
