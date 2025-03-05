@@ -29,7 +29,6 @@ Requires MacOS 12+. Tested using MacOS 12.7.6 (Monterey)
   - viridisLite
   - EnvStats
   - dplyr
-  - OpenMX
 
 ## Install JAGS
 - JAGS (Just Another Gibbs Sampler) is the "engine" that power the MixSIAR model and is installed separately from the supporting R packages.
