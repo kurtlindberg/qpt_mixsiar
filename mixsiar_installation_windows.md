@@ -38,7 +38,6 @@ Since the default Linux distribution installed with WSL is Ubuntu, the following
   - viridisLite
   - EnvStats
   - dplyr
-  - OpenMX
 
 ## Install JAGS
 - JAGS (Just Another Gibbs Sampler) is the "engine" that power the MixSIAR model and is installed separately from the supporting R packages.
